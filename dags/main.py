@@ -92,5 +92,6 @@ with DAG(
     soda_validate_staging = yt_elt_data_quality(staging_schema)
     soda_validate_core = yt_elt_data_quality(core_schema)
 
+
     # Define dependencies
     soda_validate_staging >> soda_validate_core
