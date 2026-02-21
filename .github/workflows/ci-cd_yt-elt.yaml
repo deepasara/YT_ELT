@@ -95,7 +95,7 @@ jobs:
                   && airflow dags list | grep -q "^data_quality" \
                   && echo "All DAGs registered" && exit 0
                 echo "Not ready yet... ($i)"
-                sleep 10
+                sleep 30
               done
               echo "DAGs not registered in time"
               airflow dags list
