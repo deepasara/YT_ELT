@@ -42,9 +42,6 @@ jobs:
 
     unit-and-integration-and-e2e-tests:
       runs-on: ubuntu-latest
-      resources:
-      limits:
-        memory: 4GB
       needs: build-and-push-image
       env:
         AIRFLOW_WWW_USER_PASSWORD: ${{ secrets.AIRFLOW_WWW_USER_PASSWORD }}
